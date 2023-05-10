@@ -69,7 +69,7 @@ Utilizando o eclipse, crie um novo projeto, NEW -> Project, e utilizei o spring 
 Dentro de src/main/java criei as classes: controller, domain e interface respository!
 
 ## Tarefasdb 
-
+```
 package br.com.tarefasdb;
 
 import java.util.Collections;
@@ -87,9 +87,9 @@ public class ProjetotarefasdbApplication {
 	}
 
 }
-
+```
 ## Domain
-
+```
 package br.com.tarefasdb.domain;
 
 import java.util.Date;
@@ -185,9 +185,10 @@ public class Tarefas {
 	}
 
 }
+```
 
 ## Repository
-
+```
 package br.com.tarefasdb.repository;
 
 import java.util.List;
@@ -201,10 +202,11 @@ public interface TarefasdbRepository extends JpaRepository <Tarefas, Integer> {
 	public List<Tarefas> findByTitulo(String titulo);
 	public List<Tarefas> findByEstado(String estado);
 }
+```
 
 ## Controller 
 
-package br.com.tarefasdb.controller;
+```package br.com.tarefasdb.controller;
 
 import java.util.List;
 
@@ -274,10 +276,11 @@ public class TarefasController {
 	}
 	
 }
+```
 
 ## Configuração do Application.properties
 
-spring.datasource.url=jdbc:mysql://172.17.0.2:3306/tarefasdb?usessl=false
+```spring.datasource.url=jdbc:mysql://172.17.0.2:3306/tarefasdb?usessl=false
 
 spring.datasource.username=root
 
@@ -289,6 +292,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 #porta do servidor spring
 server.port=8095
+```
 
 #este foi o código utilizado para criação da aplicação, após criado realizei testes das rotas criadas, todo um processo de validação utilizando o postman.
 
